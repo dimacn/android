@@ -1,27 +1,5 @@
-CyanogenMod
+CyanogenMod 6 for Samsung Galaxy Spica i5700
 ===========
-
-Submitting Patches
-------------------
-Patches are always welcome!  Please submit your patches via CyanogenMod Gerrit!
-You can do this by using these commands:
-
-    (From root android directory)
-    . build/envsetup.sh
-    (Go to repo you are patching, make your changes and commit)
-    cmgerrit <for(new)/changes(patch set)> <branch/change-id> 
-
-    repo start froyo .
-    (Make your changes and commit)
-    repo upload .
-Note: "." meaning current directory
-For more help on using this tool, use this command: repo help upload
-
-Make your changes and commit with a detailed message, starting with what you are working with (i.e. vision: Update Kernel)
-Commit your patches in a single commit. Squash multiple commit using this command: git rebase -i HEAD~<# of commits>
-
-To view the status of your and others' patches, visit [CyanogenMod Code Review](http://review.cyanogenmod.org/)
-
 
 Getting Started
 ---------------
@@ -31,20 +9,42 @@ familiar with [Git and Repo](http://source.android.com/download/using-repo).
 
 To initialize your local repository using the CyanogenMod trees, use a command like this:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b froyo
+    repo init -u git://github.com/dimacn/android -b froyo
 
 Then to sync up:
 
     repo sync
 
-Please see the [CyanogenMod Wiki](http://wiki.cyanogenmod.org/) for building instructions.
+mkdir vendor/spica/proprietary
+    
+- Download gapps-mdpi-20110501-signed.zip and extract all files in proprietary
 
-For more information on this Github Organization and how it is structured, 
-please [read the wiki article](http://wiki.cyanogenmod.org/index.php/Github_Organization)
+- Update gapps with new versions and add new applications:
 
-Buildbot
---------
+AndriodTerm.apk     GPSTest.apk              Gmail.apk               Maps.apk      WifiAnalyzer.apk
+BarcodeScanner.apk  GenieWidget.apk          GooglePlayServices.apk  QuickPic.apk
+CarHomeGoogle.apk   GingerbreadKeyboard.apk  LauncherPro.apk         Vending.apk
 
-All supported devices are built nightly and periodically as changes are committed to ensure the source trees remain buildable.
+Extract lib/armeabi/*.so files from APK files, and copy them too.
 
-You can view the current build statuses at [CyanogenMod Jenkins](http://jenkins.cyanogenmod.org/)
+
+Read and update changelog: device/samsung/spica/CHANGELOG
+
+
+. build/envsetup.sh
+lunch spica-eng
+make -j3 otapackage
+
+"-j3" means qty of CPU (2) + 1 = 3
+
+
+Find your ZIP rom here:
+
+out/target/product/GT-I5700/spica-ota-eng.*.zip
+
+Operations with ZIP:
+
+* delete Home.apk Term.apk
+* copy in your ZIP from ready release: kernel xbin/zImage and install_busybox.sh
+* copy/replace in your ZIP from ready release: META-INF/com/google/android/update-script
+* unpack and copy Intercept3D-CM8.4.zip DpadMusicControl-0.1-CM8.3.zip SSSwitch6v02.zip

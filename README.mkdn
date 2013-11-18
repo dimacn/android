@@ -17,9 +17,11 @@ Then to sync up:
 
     mkdir vendor/spica/proprietary
     
-- Download gapps-mdpi-20110501-signed.zip and extract all files in proprietary
+Download gapps-mdpi-20110501-signed.zip and extract all files in proprietary.
 
-- Update gapps with new versions and add new applications:
+http://goo.im/gapps/gapps-mdpi-20110501-signed.zip
+
+Update gapps with new versions and add new applications:
 
 AndriodTerm.apk     GPSTest.apk              Gmail.apk               Maps.apk      WifiAnalyzer.apk
 BarcodeScanner.apk  GenieWidget.apk          GooglePlayServices.apk  QuickPic.apk

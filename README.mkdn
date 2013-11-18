@@ -15,7 +15,7 @@ Then to sync up:
 
     repo sync
 
-mkdir vendor/spica/proprietary
+    mkdir vendor/spica/proprietary
     
 - Download gapps-mdpi-20110501-signed.zip and extract all files in proprietary
 
@@ -31,9 +31,9 @@ Extract lib/armeabi/*.so files from APK files, and copy them too.
 Read and update changelog: device/samsung/spica/CHANGELOG
 
 
-. build/envsetup.sh
-lunch spica-eng
-make -j3 otapackage
+    . build/envsetup.sh
+    lunch spica-eng
+    make -j3 otapackage
 
 "-j3" means qty of CPU (2) + 1 = 3
 

@@ -48,7 +48,7 @@ out/target/product/GT-I5700/spica-ota-eng.*.zip
 
 Operations with ZIP:
 
-* delete Home.apk Term.apk
+* delete Term.apk
 * copy in your ZIP from ready release: kernel xbin/zImage and install_busybox.sh
 * copy/replace in your ZIP from ready release: META-INF/com/google/android/update-script
 * unpack and copy Intercept3D-CM8.4.zip DpadMusicControl-0.1-CM8.3.zip SSSwitch6v02.zip

@@ -14,6 +14,8 @@ To initialize your local repository using the CyanogenMod trees, use a command l
 Then to sync up:
 
     repo sync
+    
+You will need to download base application.
 
     mkdir vendor/spica/proprietary
     

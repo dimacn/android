@@ -51,4 +51,6 @@ Operations with ZIP:
 * delete Term.apk
 * copy in your ZIP from ready release: kernel xbin/zImage and install_busybox.sh
 * copy/replace in your ZIP from ready release: META-INF/com/google/android/update-script
-* unpack and copy Intercept3D-CM8.4.zip DpadMusicControl-0.1-CM8.3.zip SSSwitch6v02.zip
+* unpack and copy Intercept3D-CM8.4.zip DpadMusicControl-0.1-CM8.3.zip SSSwitch6v03.zip
+
+Development thread: http://forum.samdroid.net/f53/cyanogenmod-6-nightly-spica-6834/

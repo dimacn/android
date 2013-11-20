@@ -29,6 +29,7 @@ AndriodTerm.apk     GPSTest.apk              Gmail.apk               Maps.apk   
 BarcodeScanner.apk  GenieWidget.apk          GooglePlayServices.apk  QuickPic.apk
 CarHomeGoogle.apk   GingerbreadKeyboard.apk  LauncherPro.apk         Vending.apk
 
+Find this applications in already builded ROM.
 Extract lib/armeabi/*.so files from APK files, and copy them too.
 
 
